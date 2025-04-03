@@ -228,13 +228,13 @@ def update_graphs(selected_genre, selected_ville):
     )
 
     # Histogramme de la répartition des montants totaux des achats par sexe et par ville
-    histo_fig = px.histogram(df_genre_ville, x="Date", y="Total", color='Gender',  color_discrete_map=colors_gender)
+    histo_fig = px.histogram(df_genre_ville, x="Total", color='Gender',  color_discrete_map=colors_gender)
 
     # Mise en page de l'histogramme
     histo_fig.update_layout(
         title=f"Répartition des montants totaux des achats par sexe et <br> par ville pour {selected_ville}",
-        xaxis_title="Date d'achat",
-        yaxis_title="Montant total",
+        xaxis_title="Montant d'achat",
+        yaxis_title="Quantité total",
         legend_title="Genre",
         plot_bgcolor=couleur_fond_tracer,  
         paper_bgcolor=couleur_fond_papier

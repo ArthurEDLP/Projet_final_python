@@ -10,7 +10,7 @@ app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
 # Chargement des données
-df = pd.read_csv("C:/Users/arthu/OneDrive/Bureau/Master/python avancé/projet_final/supermarket_sales.csv")
+df = pd.read_csv("supermarket_sales.csv")
 
 # Transformation des dates
 df['Date'] = pd.to_datetime(df['Date'])
